@@ -13,7 +13,7 @@ class Artist(models.Model):
 
 class Album(models.Model):
     name = models.CharField("album",max_length=50)
-    artist = models.ForeignKey(Artist)
+    artist = models.ForeignKey(Artist,on_delete=models.PROTECT)
 
 class ArtistForm(forms.ModelForm):
     class Meta:
