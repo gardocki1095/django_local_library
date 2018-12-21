@@ -19,7 +19,7 @@ def artistcreate(request):
         
 def artists(request):
     artists = Artist.objects.all()
-    return render('app/artists.html',{'artists':artists})
+    return render('templates/app/artists.html',{'artists':artists})
 
 def artistdetails(request, id):
     artist = Artist.objects.get(pk = id)
