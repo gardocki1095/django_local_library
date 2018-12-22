@@ -19,11 +19,11 @@ def artistcreate(request):
         
 def artists(request):
     artists = Artist.objects.all()
-    return render('app/artists.html',{'artists':artists})
+    return render(request,'app/artists.html',{'artists':artists})
 
 def artistdetails(request, id):
     artist = Artist.objects.get(pk = id)
-    return render_to_response('templates/app/artistdetails.html',{'artist':artist})
+    return render(request,'templates/app/artistdetails.html',{'artist':artist})
 
 def home(request):
     """Renders the home page."""
