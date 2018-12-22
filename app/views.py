@@ -23,7 +23,7 @@ def artists(request):
 
 def artistdetails(request, id):
     artist = Artist.objects.get(pk = id)
-    return render(request,'templates/app/artistdetails.html',{'artist':artist})
+    return render(request,'app/artistdetails.html',{'artist':artist})
 
 def home(request):
     """Renders the home page."""
